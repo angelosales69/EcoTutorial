@@ -1,0 +1,26 @@
+{% load static %}
+<!-- Section: Design Block -->
+<nav class="flex flex-row bg-green-500 bg-repeat-spacpy-2 sticky top-0 z-auto">
+  <img class="w-10 mx-3 ml-40 p-0" src="{% static 'images/EcoTutorial.jpg'%}" alt="navlogo">
+    <h1 class="text-3xl font-bold text-slate-200">
+      EcoTutorial
+    </h1>
+  <div class="ml-20">
+  <ul class="flex flex-row px-20 text-slate-200 items-center pl-[6.2in]">
+      <li class="text-base p-2 mr-10 hover:bg-transparent hover:text-white" >
+          <a href="{% url 'homeagri' %}">Home</a>
+      </li>
+      <li class="text-base p-2 mr-10 hover:bg-transparent hover:text-white">
+          <a href="{% url 'tutorialagri' %}">Tutorial</a>
+      </li>
+      <li class="text-base p-2 mr-10 hover:bg-transparent hover:text-white">
+          <a href="{% url 'aboutagri' %}">About</a>
+      </li>
+      <li class="text-base p-2 mr-10 hover:bg-transparent hover:text-white" >
+          <a href="{% url 'contactagri' %}">Contact</a>
+      </li>
+
+  </ul>
+  </div> 
+
+</nav> 

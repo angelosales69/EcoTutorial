@@ -1,0 +1,20 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block content %}
+
+<h1 class="text-2xl text-danger py-3 px-5 m-3 rounded-lg"
+>Are you sure to <span class="text-bold">!DELETE Video!</span> {{tutorial}}?</h1>
+
+<div class="p-1 mx-24">
+<form method="POST" >
+    {% csrf_token %}
+    <a href="{% url 'dashboardagri' %}" class="bg-warning text-white py-3 px-5 m-3
+    rounded-lg "
+    >Cancel</a>
+
+    <input type="submit" name="Confirm" class="bg-danger text-white py-3 px-5
+    m-3 rounded-lg" >
+</form>
+</div>
+
+{% endblock %}

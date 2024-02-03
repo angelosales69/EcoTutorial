@@ -1,0 +1,21 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block content %}
+<h5 class="mb-6 text-6xl font-semibold md:text-center">See all Tutorials:</h5>
+<fieldset class="outline outline-offset-10 outline-green-500 p-10">
+<div class="p-3 flex flex-wrap">
+          {% for tutorial in tutorial %}
+          <div class="flex p-10"> 
+              <h1 class="text-lg text-bold">{{tutorial.title}}</h1><br/>
+              <h1 class="text-lg text-bold">{{tutorial.content}}</h1><br/>
+              <h1 class="text-lg text-bold">{{tutorial.created_at}}</h1><br/>
+              <h1 class="text-lg text-bold">{{tutorial.updated_at}}</h1><br/>
+              <h1 class="text-lg text-bold">{{tutorial.author}}</h1><br/>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/MBYeZEPB8x0?si=7puIIBZ-bTXfLovA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  <br>
+          </div>
+        </fieldset>
+        
+      {% endfor %}
+
+
+{% endblock %}

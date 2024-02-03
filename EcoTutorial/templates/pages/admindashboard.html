@@ -1,0 +1,29 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block content %}
+
+<section class="text-black bg-green-800 p-10">
+    <h1 class="text-white text-center text-6xl">DASHBOARD</h1>
+    <div class="p-4">
+        <a href="{% url 'tutorialformagri' %}" class="text-center bg-green-900 text-white p-2 rounded hover:bg-slate-200 hover:text-slate-800">Upload Tutorial</a>
+    
+    <div class="p-3 flex flex-wrap">
+          {% for tutorial in tutorial %}
+          <div class="flex p-10">
+              <h1 class="text-lg text-bold">{{tutorial.id}}</h1><br/>
+              <h1 class="text-lg text-bold">{{tutorial.title}}</h1><br/>
+              <h1 class="text-lg text-bold">{{tutorial.content}}</h1><br/>
+              <h1 class="text-lg text-bold">{{tutorial.created_at}}</h1><br/>
+              <h1 class="text-lg text-bold">{{tutorial.updated_at}}</h1><br/>
+              <h1 class="text-lg text-bold">{{tutorial.author}}</h1><br/>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/MBYeZEPB8x0?si=H2EEz2_kZ7x6eDQc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br>     
+              <a class="p-2 hover:text-yellow-400 text-warning hover:text-xl" href="{% url 'updatetutorial' tutorial.id %}">Edit</a>
+              <a class="p-2 hover:text-rose-700 text-danger hover:text-xl" href="{% url 'deletetutorial' tutorial.id %}">delete</a>
+          </div>
+      {% endfor %}
+</div>
+</section>
+
+
+{% endblock %}
